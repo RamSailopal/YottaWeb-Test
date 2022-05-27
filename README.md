@@ -74,7 +74,19 @@ YottaDB-Go - https://docs.yottadb.com/MultiLangProgGuide/goprogram.html
 
 Each stack is tested using Locust - https://docs.locust.io/en/stable/what-is-locust.html
 
+To run test navigate to:
 
+https:// <gitpod-address> :8089 - **yottamgweb**
+    
+https://<gitpod-address>:8090 - **yottamg_python**
+    
+https://<gitpod-address>:8091 - **nodem**
+    
+https://<gitpod-address>:8092 - **mgdbx**
+    
+https://<gitpod-address>:8093 - **yottapython**
+    
+https://<gitpod-address>:8094 - **yottago**
 
 
 
