@@ -1,0 +1,7 @@
+[
+      {
+        "uri": "/api/patients",
+        "method": "GET",
+        "handler": "patients^myRESTAPIs"
+      },
+]
