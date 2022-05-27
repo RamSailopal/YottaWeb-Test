@@ -44,8 +44,6 @@ mgdbx - https://github.com/chrisemunt/mg-dbx
 
 # Native M Stack
 
-Apache
-
 mgweb-server - https://github.com/robtweed/mgweb-server
 
 
