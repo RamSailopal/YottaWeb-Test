@@ -15,7 +15,7 @@ function getmjson() {
   var age=patient.get(id, 'age');
   var name=patient.get(id, 'name');
   var address=patient.get(id, 'address');
-  var jsonstr='[{ "id": "' + id + '", "name": "' + name.data + '", "age: "' + age.data + '", "sex":  "' + sex.data + '", "address: "' + address.data + '" }]'
+  var jsonstr='[{ "id": "' + id + '", "name": "' + name + '", "age: "' + age + '", "sex":  "' + sex + '", "address: "' + address + '" }]'
   pat=patient.next(pat);
   console.log(jsonstr);
   db.close();
