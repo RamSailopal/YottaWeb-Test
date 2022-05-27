@@ -91,6 +91,8 @@ https://gitpod-address:8081/api/patients - **yottago**
 
 # Running Tests
 
+![Alt text](locust.JPG?raw=true "Locust")
+
 Each stack is tested using Locust - https://docs.locust.io/en/stable/what-is-locust.html
 
 To run test navigate to:
