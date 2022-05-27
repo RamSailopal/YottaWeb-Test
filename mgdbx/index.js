@@ -16,7 +16,7 @@ function getmjson() {
   var name=patient.get(id, 'name');
   var address=patient.get(id, 'address');
   var jsonstr='[{ "id": "' + id + '", "name": "' + name.data + '", "age: "' + age.data + '", "sex":  "' + sex.data + '", "address: "' + address.data + '" }]'
-  pat=ydb.order({global: glbal, subscripts: [pat.result]});
+  pat=patient.next(pat);
   console.log(jsonstr);
   db.close();
   return jsonstr;
