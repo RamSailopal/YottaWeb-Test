@@ -23,5 +23,5 @@ cd /home/yotta-back
 /usr/lib/node_modules/corepack/shims/yarn add mg-dbx
 npm install express
 cp /home/entrypoint/index.js index.js
-tail -f /dev/null
+source /opt/yottadb/current/ydb_env_set
 node index.js

@@ -4,8 +4,7 @@ var db = new dbx();
 function getmjson() {
   var open = db.open({
            type: "YottaDB",
-           host: "127.0.0.1",
-           tcp_port: 7042,
+           path: "/opt/yottadb/current",
          });
   let cnt=0;
   var pat="";
