@@ -8,7 +8,7 @@ Single containers are provisioned for each stack with the YottaDB layer, web pro
 
 # Python Stack
 
-**Stack 1 - yottapython
+**Stack 1 - yottapython**
 
 Flask - https://flask.palletsprojects.com/en/2.1.x/
 
