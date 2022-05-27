@@ -14,7 +14,9 @@ The different stacks extract the same data from their embedded YOttaDB databases
     ^PATIENTS(1,"sex")="Male"
     
     
- This data is then exposed as a REST API, JSON based endpoint  
+ This data is then exposed as a REST API, JSON based endpoint:
+ 
+    [{ "id": "1", "name": "Bob Taylor", "age: "52", "sex": "Male", "address: "234,Timbucktwo Road, Fantasy City" }]
 
 
 
