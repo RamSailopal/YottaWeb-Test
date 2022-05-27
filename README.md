@@ -70,6 +70,23 @@ Apache
 YottaDB-Go - https://docs.yottadb.com/MultiLangProgGuide/goprogram.html
 
 
+# API endpoints
+
+To view the endpoints:
+
+https://gitpod-address:8080/api/patients - **yottamgweb**
+
+https://gitpod-address:5001/api/patients - **yottamg_python**
+    
+https://gitpod-address:3002/api/patients - **nodem**
+    
+https://gitpod-address:3003/api/patients - **mgdbx**
+    
+https://gitpod-address:5000/api/patients - **yottapython**
+    
+https://gitpod-address:8081/api/patients - **yottago**
+
+
 # Running Tests
 
 Each stack is tested using Locust - https://docs.locust.io/en/stable/what-is-locust.html
