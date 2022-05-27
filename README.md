@@ -76,7 +76,7 @@ Each stack is tested using Locust - https://docs.locust.io/en/stable/what-is-loc
 
 To run test navigate to:
 
-https://<gitpod-address>:8089 - **yottamgweb**
+https:// <gitpod-address> :8089 - **yottamgweb**
     
 https://<gitpod-address>:8090 - **yottamg_python**
     
