@@ -18,7 +18,7 @@ The different stacks extract the same data from their embedded YOttaDB databases
 
 
 
-# Python Stack
+# Python Stacks
 
 **Stack 1 - yottapython**
 
@@ -37,7 +37,7 @@ Apache
 mg_python - https://github.com/chrisemunt/mg_python
 
 
-# Node Stack
+# Node Stacks
 
 **Stack 1 - nodem**
 
