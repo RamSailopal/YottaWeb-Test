@@ -6,6 +6,18 @@ A test of different web frameworks with different YottaDB connectors
 
 Single containers are provisioned for each stack with the YottaDB layer, web proxy layer and application/YottaDB connector layer all enclosed.
 
+The different stacks extract the same data from their embedded YOttaDB databases:
+
+    ^PATIENTS(1,"address")="234,Timbucktwo Road, Fantasy City"
+    ^PATIENTS(1,"age")=52
+    ^PATIENTS(1,"name")="Bob Taylor"
+    ^PATIENTS(1,"sex")="Male"
+    
+    
+ This data is then exposed as a REST API, JSON based endpoint  
+
+
+
 # Python Stack
 
 **Stack 1 - yottapython**
