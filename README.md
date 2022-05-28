@@ -114,7 +114,7 @@ https://gitpod-address:8094 - **yottago**
 
 1000 users were tested against each stack. The number of requests were allowed to reach approxamately 100000 requests.
 
-The results for each stakc can be found here:
+The results for each stack can be found here:
 
 **yottamgweb** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottamgweb.html
 
