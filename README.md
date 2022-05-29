@@ -6,7 +6,7 @@ A test of different web frameworks with different YottaDB connectors
 
 Single containers are provisioned for each stack with the YottaDB layer, web proxy layer and application/YottaDB connector layer all enclosed.
 
-The different stacks extract the same data from their embedded YOttaDB databases:
+The different stacks extract the same data from their embedded YottaDB databases:
 
     ^PATIENTS(1,"address")="234,Timbucktwo Road, Fantasy City"
     ^PATIENTS(1,"age")=52
