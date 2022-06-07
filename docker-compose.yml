@@ -158,7 +158,7 @@ yottaweb:
    networks:
       - yottanet
    ports:
-      - 8080:80
+      - 8082:80
    mem_limit: 1G
    volumes:
       - "$PWD/yottaweb:/home/entrypoint"
