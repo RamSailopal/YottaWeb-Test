@@ -151,7 +151,7 @@ services:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottago:80'
  
-yottaweb:
+ yottaweb:
    image: docker.io/yottadb/yottadb-base:latest
    hostname: yottaweb
    container_name: yottaweb
