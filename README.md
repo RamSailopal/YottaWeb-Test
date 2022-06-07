@@ -137,5 +137,7 @@ The results for each stack can be found here:
 
 **yottago** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottago.html
 
+**yottaweb** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottaweb.html
+
 
 
