@@ -143,5 +143,13 @@ The results for each stack can be found here:
 
 https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/overallstats.html
 
+# Further Details
 
+The application code relating to each framwork is within each framework directory i.e.
+
+https://github.com/RamSailopal/YottaWeb-Test/blob/main/yottaweb/patientapi.m
+
+The provisioning detail can also be attained from the **entrypoint.sh** script within each respective framework directory i.e.
+
+https://github.com/RamSailopal/YottaWeb-Test/blob/main/yottaweb/entrypoint.sh
 
