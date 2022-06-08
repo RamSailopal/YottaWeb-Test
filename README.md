@@ -60,11 +60,11 @@ mgdbx - https://github.com/chrisemunt/mg-dbx
 
 # Native M Stack 
 
-** Stack 1 - yottamgweb**
+**Stack 1 - yottamgweb**
 
 mgweb-server - https://github.com/robtweed/mgweb-server
 
-** Stack 2 - yottaweb**
+**Stack 2 - yottaweb**
 
 Apache
 
