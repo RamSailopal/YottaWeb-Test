@@ -60,11 +60,11 @@ mgdbx - https://github.com/chrisemunt/mg-dbx
 
 # Native M Stack 
 
-** Stack 1 - yottamgweb**
+**Stack 1 - yottamgweb**
 
 mgweb-server - https://github.com/robtweed/mgweb-server
 
-** Stack 2 - yottaweb**
+**Stack 2 - yottaweb**
 
 Apache
 
@@ -139,5 +139,17 @@ The results for each stack can be found here:
 
 **yottaweb** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottaweb.html
 
+# Overall Comparison of performance
 
+https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/overallstats.html
+
+# Further Details
+
+The application code relating to each framwork is within each framework directory i.e.
+
+https://github.com/RamSailopal/YottaWeb-Test/blob/main/yottaweb/patientapi.m
+
+The provisioning detail can also be attained from the **entrypoint.sh** script within each respective framework directory i.e.
+
+https://github.com/RamSailopal/YottaWeb-Test/blob/main/yottaweb/entrypoint.sh
 
