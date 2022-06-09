@@ -176,6 +176,30 @@ services:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottaweb:80'
 
+ yottac:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottac
+   container_name: yottac
+   networks:
+      - yottanet
+   ports:
+      - 8083:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottac++:/home/yottac++"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/yottac++/entrypoint.sh
+
+
+ locust_yottac:
+   image: docker.io/locustio/locust:latest
+   networks:
+      - yottanet
+   ports:
+      - 8096:8089
+   volumes:
+      - "$PWD/locust:/home/locust"
+   entrypoint: locust --host 'http://yottac:80'
 
 networks:
     yottanet:
