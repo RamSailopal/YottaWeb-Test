@@ -86,6 +86,13 @@ Apache
 
 CPP Access for YottaDB - https://github.com/informatik-aalen/CPP-Access-for-YottaDB
 
+# Rust Stack - yottarust
+
+Rocket - https://rocket.rs/
+
+Apache
+
+YottaDB-Rust - https://yottadb.gitlab.io/Lang/YDBRust/yottadb/
 
 # API endpoints
 
@@ -106,6 +113,8 @@ https://gitpod-address:8081/api/patients - **yottago**
 https://gitpod-address:8082/api/patients - **yottaweb**
 
 https://gitpod-address:8083/api/patients - **yottac**
+
+https://gitpod-address:8084/api/patients - **yottarust**
 
 # Running Tests
 
@@ -130,6 +139,8 @@ https://gitpod-address:8094 - **yottago**
 https://gitpod-address:8095 - **yottaweb**
 
 https://gitpod-address:8096 - **yottac**
+
+https://gitpod-address:8097 - **yottarust**
 
 # Actual Test runs
 
