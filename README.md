@@ -94,6 +94,14 @@ Apache
 
 YottaDB-Rust - https://yottadb.gitlab.io/Lang/YDBRust/yottadb/
 
+# Lua Stack - yottalua
+
+Pegasus - https://github.com/EvandroLG/pegasus.lua
+
+Apache
+
+YottaDB-Lua - https://docs.yottadb.com/MultiLangProgGuide/luaprogram.html
+
 # API endpoints
 
 To view the endpoints:
@@ -115,6 +123,8 @@ https://gitpod-address:8082/api/patients - **yottaweb**
 https://gitpod-address:8083/api/patients - **yottac**
 
 https://gitpod-address:8084/api/patients - **yottarust**
+
+https://gitpod-address:8085/api/patients - **yottalua**
 
 # Running Tests
 
@@ -141,6 +151,8 @@ https://gitpod-address:8095 - **yottaweb**
 https://gitpod-address:8096 - **yottac**
 
 https://gitpod-address:8097 - **yottarust**
+
+https://gitpod-address:8098 - **yottalua**
 
 # Actual Test runs
 
