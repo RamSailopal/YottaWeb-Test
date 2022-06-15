@@ -176,7 +176,9 @@ The results for each stack can be found here:
 
 **yottac** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottac.html
 
-**yottarust** - - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottarust.html
+**yottarust** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottarust.html
+
+**yottalua** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottalua.html
 
 # Overall Comparison of performance
 
