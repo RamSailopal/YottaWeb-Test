@@ -30,6 +30,7 @@ func main() {
 		      name = patients.Get(pat,"name").Data.(string)
 		      age = patients.Get(pat,"age").Data.(string)
 		}
+                db.Close()
 	        c.JSON(200, gin.H{
 	          "id": id,
 	          "name": name,
