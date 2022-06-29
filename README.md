@@ -70,9 +70,7 @@ Apache
 
 M-Web-Server - https://github.com/shabiel/M-Web-Server
 
-# Go Stacks 
-
-**Stack 1 - yottago**
+# Go Stack - yottago
 
 Gin - https://github.com/gin-gonic/gin
 
@@ -80,13 +78,6 @@ Apache
 
 YottaDB-Go - https://docs.yottadb.com/MultiLangProgGuide/goprogram.html
 
-**Stack 2 - mg_go**
-
-Gin - https://github.com/gin-gonic/gin
-
-Apache
-
-MG_Go - https://github.com/chrisemunt/mg_go 
 
 # C++ Stack - yottac
 
@@ -136,7 +127,6 @@ https://gitpod-address:8084/api/patients - **yottarust**
 
 https://gitpod-address:8085/api/patients - **yottalua**
 
-https://gitpod-address:8086/api/patients - **mg_go**
 
 # Running Tests
 
@@ -166,7 +156,6 @@ https://gitpod-address:8097 - **yottarust**
 
 https://gitpod-address:8098 - **yottalua**
 
-https://gitpod-address:8099 - **mg_go**
 
 # Actual Test runs
 
