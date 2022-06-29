@@ -251,5 +251,30 @@ services:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottalua:80'
 
+ mggo:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: mggo
+   container_name: mggo
+   networks:
+      - yottanet
+   ports:
+      - 8086:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/mg_go:/home/mg_go"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/mg_go/entrypoint.sh
+
+
+ locust_mggo:
+   image: docker.io/locustio/locust:latest
+   networks:
+      - yottanet
+   ports:
+      - 8099:8089
+   volumes:
+      - "$PWD/locust:/home/locust"
+   entrypoint: locust --host 'http://mggo:80'
+
 networks:
     yottanet:
