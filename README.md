@@ -80,7 +80,7 @@ Apache
 
 YottaDB-Go - https://docs.yottadb.com/MultiLangProgGuide/goprogram.html
 
-**Stack 1 - mg_go**
+**Stack 2 - mg_go**
 
 Gin - https://github.com/gin-gonic/gin
 
