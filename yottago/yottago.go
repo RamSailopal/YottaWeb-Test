@@ -15,6 +15,7 @@ func main() {
                 age, err := yottadb.ValE(tptoken, &errstr, "^PATIENTS", []string{"1", "age"})
 		if err == nil {
 		                             c.JSON(200, gin.H{
+                                                  "id": "1",
 			                          "name": name,
                                                   "age": age,
                                                   "sex": sex,

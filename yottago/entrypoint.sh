@@ -19,4 +19,5 @@ cp -f /home/yottago/000-default.conf /etc/apache2/sites-available
 a2enmod proxy && a2enmod proxy_http
 service apache2 start
 cd /home/yottago
+go build
 go run yottago
