@@ -291,7 +291,7 @@ services:
    entrypoint: /home/mg_ruby/entrypoint.sh
 
 
- locust_mgrust:
+ locust_mgruby:
    image: docker.io/locustio/locust:latest
    networks:
       - yottanet
