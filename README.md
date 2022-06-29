@@ -105,7 +105,7 @@ YottaDB-Lua - https://docs.yottadb.com/MultiLangProgGuide/luaprogram.html
 
 # PHP Stack - mg_php
 
-Apache/mod php
+Apache/mod_php
 
 mg_php - https://github.com/chrisemunt/mg_php
 
