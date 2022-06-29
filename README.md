@@ -103,29 +103,37 @@ Apache
 
 YottaDB-Lua - https://docs.yottadb.com/MultiLangProgGuide/luaprogram.html
 
+# PHP Stack - mg_php
+
+Apache/mod php
+
+mg_php - https://github.com/chrisemunt/mg_php
+
 # API endpoints
 
 To view the endpoints:
 
-https://gitpod-address:8080/api/patients - **yottamgweb**
+https://8080-gitpod-address/api/patients - **yottamgweb**
 
-https://gitpod-address:5001/api/patients - **yottamg_python**
+https://5001-gitpod-address/api/patients - **yottamg_python**
     
-https://gitpod-address:3002/api/patients - **nodem**
+https://3002-gitpod-address/api/patients - **nodem**
     
-https://gitpod-address:3003/api/patients - **mgdbx**
+https://3003-gitpod-address/api/patients - **mgdbx**
     
-https://gitpod-address:5000/api/patients - **yottapython**
+https://5000-gitpod-address/api/patients - **yottapython**
     
-https://gitpod-address:8081/api/patients - **yottago**
+https://8081-gitpod-address/api/patients - **yottago**
 
-https://gitpod-address:8082/api/patients - **yottaweb**
+https://8082-gitpod-address/api/patients - **yottaweb**
 
-https://gitpod-address:8083/api/patients - **yottac**
+https://8083-gitpod-address/api/patients - **yottac**
 
-https://gitpod-address:8084/api/patients - **yottarust**
+https://8084-gitpod-address/api/patients - **yottarust**
 
-https://gitpod-address:8085/api/patients - **yottalua**
+https://8085-gitpod-address/api/patients - **yottalua**
+
+https://8086-gitpod-address/api/patients - **mg_php**
 
 
 # Running Tests
@@ -136,26 +144,27 @@ Each stack is tested using Locust - https://docs.locust.io/en/stable/what-is-loc
 
 To run test navigate to:
 
-https://gitpod-address:8089 - **yottamgweb**
+https://8089-gitpod-address - **yottamgweb**
     
-https://gitpod-address:8090 - **yottamg_python**
+https://8090-gitpod-address - **yottamg_python**
     
-https://gitpod-address:8091 - **nodem**
+https://8091-gitpod-address - **nodem**
     
-https://gitpod-address:8092 - **mgdbx**
+https://8092-gitpod-address - **mgdbx**
     
-https://gitpod-address:8093 - **yottapython**
+https://8093-gitpod-address - **yottapython**
     
-https://gitpod-address:8094 - **yottago**
+https://8094-gitpod-address - **yottago**
 
-https://gitpod-address:8095 - **yottaweb**
+https://8095-gitpod-address - **yottaweb**
 
-https://gitpod-address:8096 - **yottac**
+https://8096-gitpod-address - **yottac**
 
-https://gitpod-address:8097 - **yottarust**
+https://8097-gitpod-address - **yottarust**
 
-https://gitpod-address:8098 - **yottalua**
+https://8098-gitpod-address - **yottalua**
 
+https://8099-gitpod-address - **mg_php**
 
 # Actual Test runs
 
@@ -182,6 +191,8 @@ The results for each stack can be found here:
 **yottarust** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottarust.html
 
 **yottalua** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottalua.html
+
+**mg_php** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_php.html
 
 # Overall Comparison of performance
 
