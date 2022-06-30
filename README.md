@@ -111,9 +111,9 @@ mg_php - https://github.com/chrisemunt/mg_php
 
 # Ruby Stack - mgruby
 
-Apache
-
 Ramaze - http://ramaze.net/
+
+Apache
 
 mg_ruby - https://github.com/chrisemunt/mg_ruby
 
