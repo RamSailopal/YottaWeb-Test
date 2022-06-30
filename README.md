@@ -103,11 +103,20 @@ Apache
 
 YottaDB-Lua - https://docs.yottadb.com/MultiLangProgGuide/luaprogram.html
 
-# PHP Stack - mg_php
+# PHP Stack - mgphp
 
 Apache/mod_php
 
 mg_php - https://github.com/chrisemunt/mg_php
+
+# Ruby Stack - mgruby
+
+Apache
+
+Ramaze - http://ramaze.net/
+
+mg_ruby - https://github.com/chrisemunt/mg_ruby
+
 
 # API endpoints
 
@@ -133,7 +142,9 @@ https://8084-gitpod-address/api/patients - **yottarust**
 
 https://8085-gitpod-address/api/patients - **yottalua**
 
-https://8086-gitpod-address/api/patients - **mg_php**
+https://8086-gitpod-address/api/patients - **mgphp**
+
+https://8087-gitpod-address/api/patients - **mgruby**
 
 
 # Running Tests
@@ -164,7 +175,10 @@ https://8097-gitpod-address - **yottarust**
 
 https://8098-gitpod-address - **yottalua**
 
-https://8099-gitpod-address - **mg_php**
+https://8099-gitpod-address - **mgphp**
+
+https://8100-gitpod-address - **mgruby**
+
 
 # Actual Test runs
 
@@ -192,7 +206,10 @@ The results for each stack can be found here:
 
 **yottalua** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottalua.html
 
-**mg_php** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_php.html
+**mgphp** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_php.html
+
+**mgruby** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_ruby.html
+
 
 # Overall Comparison of performance
 
