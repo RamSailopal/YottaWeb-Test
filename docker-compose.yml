@@ -1,15 +1,5 @@
 version: "2"
 services:
- locust_yottalua:
-   image: docker.io/locustio/locust:latest
-   networks:
-      - yottanet
-   ports:
-      - 8098:8089
-   volumes:
-      - "$PWD/locust:/home/locust"
-   entrypoint: locust --host 'http://yottalua:80'
-
  yottalua:
    image: docker.io/yottadb/yottadb-base:latest
    hostname: yottalua
@@ -24,7 +14,6 @@ services:
       - "$PWD/global:/home/global"
    entrypoint: /home/yottalua/entrypoint.sh
 
-x-disabled:
  yottamgweb:
    image: docker.io/ramb0/yotta-mgweb:latest 
    hostname: yottamgweb
@@ -70,7 +59,135 @@ x-disabled:
       - "$PWD/global:/home/global"
    entrypoint: /home/entrypoint/entrypoint.sh
 
+ mgdbx:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: mgdbx
+   container_name: mgdbx
+   networks:
+      - yottanet
+   ports:
+      - 3003:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/mgdbx:/home/entrypoint"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/entrypoint/entrypoint.sh
 
+ yottapython:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottapython
+   container_name: yottapython
+   networks:
+      - yottanet
+   ports:
+      - 5000:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottapython:/home/entrypoint"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/entrypoint/entrypoint.sh
+
+
+ yottago:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottago
+   container_name: yottago
+   networks:
+      - yottanet
+   ports:
+      - 8081:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottago:/home/yottago"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/yottago/entrypoint.sh
+
+
+ yottaweb:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottaweb
+   container_name: yottaweb
+   networks:
+      - yottanet
+   ports:
+      - 8082:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottaweb:/home/entrypoint"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/entrypoint/entrypoint.sh
+
+
+ yottac:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottac
+   container_name: yottac
+   networks:
+      - yottanet
+   ports:
+      - 8083:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottac++:/home/yottac++"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/yottac++/entrypoint.sh
+
+
+ yottarust:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottarust
+   container_name: yottarust
+   networks:
+      - yottanet
+   ports:
+      - 8084:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottarust:/home/yottarust"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/yottarust/entrypoint.sh
+
+
+ mgphp:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: mgphp
+   container_name: mgphp
+   networks:
+      - yottanet
+   ports:
+      - 8086:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/mg_php:/home/mg_php"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/mg_php/entrypoint.sh
+
+ mgruby:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: mgruby
+   container_name: mgruby
+   networks:
+      - yottanet
+   ports:
+      - 8087:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/mg_ruby:/home/mg_ruby"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/mg_ruby/entrypoint.sh
+
+ locust_yottalua:
+   image: docker.io/locustio/locust:latest
+   networks:
+      - yottanet
+   ports:
+      - 8098:8089
+   volumes:
+      - "$PWD/locust:/home/locust"
+   entrypoint: locust --host 'http://yottalua:80'
+
+
+x-disabled:
  locust_mgweb:
    image: docker.io/locustio/locust:latest
    networks:
@@ -101,21 +218,6 @@ x-disabled:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://nodem:80'
 
- mgdbx:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: mgdbx
-   container_name: mgdbx
-   networks:
-      - yottanet
-   ports:
-      - 3003:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/mgdbx:/home/entrypoint"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/entrypoint/entrypoint.sh
-
-
  locust_mgdbx:
    image: docker.io/locustio/locust:latest
    networks:
@@ -125,21 +227,6 @@ x-disabled:
    volumes:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://mgdbx:80'
-
- yottapython:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottapython
-   container_name: yottapython
-   networks:
-      - yottanet
-   ports:
-      - 5000:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottapython:/home/entrypoint"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/entrypoint/entrypoint.sh
-
 
  locust_yottapython:
    image: docker.io/locustio/locust:latest
@@ -151,21 +238,6 @@ x-disabled:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottapython:80'
 
- yottago:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottago
-   container_name: yottago
-   networks:
-      - yottanet
-   ports:
-      - 8081:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottago:/home/yottago"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/yottago/entrypoint.sh
-
-
  locust_yottago:
    image: docker.io/locustio/locust:latest
    networks:
@@ -175,21 +247,6 @@ x-disabled:
    volumes:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottago:80'
-
- yottaweb:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottaweb
-   container_name: yottaweb
-   networks:
-      - yottanet
-   ports:
-      - 8082:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottaweb:/home/entrypoint"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/entrypoint/entrypoint.sh
-
 
  locust_yottaweb:
    image: docker.io/locustio/locust:latest
@@ -201,21 +258,6 @@ x-disabled:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottaweb:80'
 
- yottac:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottac
-   container_name: yottac
-   networks:
-      - yottanet
-   ports:
-      - 8083:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottac++:/home/yottac++"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/yottac++/entrypoint.sh
-
-
  locust_yottac:
    image: docker.io/locustio/locust:latest
    networks:
@@ -225,21 +267,6 @@ x-disabled:
    volumes:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottac:80'
-
- yottarust:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottarust
-   container_name: yottarust
-   networks:
-      - yottanet
-   ports:
-      - 8084:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottarust:/home/yottarust"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/yottarust/entrypoint.sh
-
 
  locust_yottarust:
    image: docker.io/locustio/locust:latest
@@ -251,20 +278,6 @@ x-disabled:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottarust:80'
 
- mgphp:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: mgphp
-   container_name: mgphp
-   networks:
-      - yottanet
-   ports:
-      - 8086:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/mg_php:/home/mg_php"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/mg_php/entrypoint.sh
-
  locust_mgphp:
    image: docker.io/locustio/locust:latest
    networks:
@@ -274,21 +287,6 @@ x-disabled:
    volumes:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://mgphp:80'
-
-
- mgruby:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: mgruby
-   container_name: mgruby
-   networks:
-      - yottanet
-   ports:
-      - 8087:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/mg_ruby:/home/mg_ruby"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/mg_ruby/entrypoint.sh
 
 
  locust_mgruby:
