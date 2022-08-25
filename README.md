@@ -1,10 +1,15 @@
 # YottaWeb-Test
 
-A test of different web frameworks with different YottaDB connectors
+A test of different web frameworks with different YottaDB connectors.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/berwynhoyt/MLuaWeb-Test)
+This is a fork of [YottaWeb-Test](https://github.com/RamSailopal/YottaWeb-Test) with a few changes:
 
-Single containers are provisioned for each stack with the YottaDB layer, web proxy layer and application/YottaDB connector layer all enclosed.
+1. You can still [open it in Gitpod](https://gitpod.io/#https://github.com/berwynhoyt/MLuaWeb-Test) as per the original project, but that is no longer my recommendation because gitpod loading varies producing inconsistent results. Better to run it with docker on your local machine. See Quickstart below.
+2. At the time of writing the results published the the original project were incorrect. They did not compare apples with apples. The tests for some languages started with 1000 users immediately for other languages only increased the number of users gradually to about 100. This has been fixed to have 1000 users consistently for all languages. It make a big difference to the results.
+
+
+
+Single docker containers are provisioned for each stack with the YottaDB layer, web proxy layer and application/YottaDB connector layer all enclosed.
 
 The different stacks extract the same data from their embedded YottaDB databases:
 
@@ -19,7 +24,24 @@ The different stacks extract the same data from their embedded YottaDB databases
 
     [{ "id": "1", "name": "Bob Taylor", "age: "52", "sex": "Male", "address: "234,Timbucktwo Road, Fantasy City" }]
 
+# Quickstart
 
+You need the latest docker (I have 20.10.17) installed so that it runs without sudo. Then:
+
+```shell
+git clone https://github.com/berwynhoyt/YottaWeb-Test.git
+cd YottaWeb-Test
+docker compose up
+# now wait for it to build and run all the docker images
+```
+
+Finally, run the tests in a new terminal:
+
+```shell
+./runlocal
+```
+
+This should generate your new test results in the locust_reports folder. You can see [my overall results here](https://htmlpreview.github.io/?https://github.com/berwynhoyt/YottaWeb-Test/blob/main/locust_reports/overallstats.html).
 
 # Python Stacks
 
