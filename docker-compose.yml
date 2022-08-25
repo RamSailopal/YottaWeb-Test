@@ -1,5 +1,30 @@
 version: "2"
 services:
+ locust_yottalua:
+   image: docker.io/locustio/locust:latest
+   networks:
+      - yottanet
+   ports:
+      - 8098:8089
+   volumes:
+      - "$PWD/locust:/home/locust"
+   entrypoint: locust --host 'http://yottalua:80'
+
+ yottalua:
+   image: docker.io/yottadb/yottadb-base:latest
+   hostname: yottalua
+   container_name: yottalua
+   networks:
+      - yottanet
+   ports:
+      - 8085:80
+   mem_limit: 1G
+   volumes:
+      - "$PWD/yottalua:/home/yottalua"
+      - "$PWD/global:/home/global"
+   entrypoint: /home/yottalua/entrypoint.sh
+
+x-disabled:
  yottamgweb:
    image: docker.io/ramb0/yotta-mgweb:latest 
    hostname: yottamgweb
@@ -225,31 +250,6 @@ services:
    volumes:
       - "$PWD/locust:/home/locust"
    entrypoint: locust --host 'http://yottarust:80'
-
- yottalua:
-   image: docker.io/yottadb/yottadb-base:latest
-   hostname: yottalua
-   container_name: yottalua
-   networks:
-      - yottanet
-   ports:
-      - 8085:80
-   mem_limit: 1G
-   volumes:
-      - "$PWD/yottalua:/home/yottalua"
-      - "$PWD/global:/home/global"
-   entrypoint: /home/yottalua/entrypoint.sh
-
-
- locust_yottalua:
-   image: docker.io/locustio/locust:latest
-   networks:
-      - yottanet
-   ports:
-      - 8098:8089
-   volumes:
-      - "$PWD/locust:/home/locust"
-   entrypoint: locust --host 'http://yottalua:80'
 
  mgphp:
    image: docker.io/yottadb/yottadb-base:latest
