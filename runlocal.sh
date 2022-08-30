@@ -6,8 +6,8 @@
 # since you aren't fighting for cpu time as you are on a gitpod.
 
 # make sure there's a directory that user locust can write to store result files
-#docker compose run --entrypoint '' -u root locust_yottalua bash -c \
-  "rm results -rf && mkdir -p results/csv && chmod 777 results results/csv"
+docker compose run --entrypoint '' -u root locust_yottalua bash -c \
+  "mkdir -p results/csv && chmod 777 results results/csv"
 
 runtime=30s
 targets="yottalua yottago yottarust yottac yottaweb yottamgweb yottapython yottamg_python nodem mgdbx mgphp mgruby"
@@ -19,7 +19,10 @@ else
         echo
         echo
         echo "~~~ Testing $i"
-        docker compose run --entrypoint '' locust_yottalua locust -f locustfile.py --host "http://$i:80" --headless -u 1000 -r 1000 -s 5 --run-time $runtime --only-summary --html results/$i.html --csv results/csv/$i
+        port=80
+        [ "$i" == "yottamgweb" ] && port=8080
+        rm -f locust/results/$i.html locust/results/csv/$i*.csv  # because a new container ID has no permissions to overwrite previous run's files
+        docker compose run --entrypoint '' locust_yottalua locust -f locustfile.py --host "http://$i:$port" --headless -u 1000 -r 1000 -s 5 --run-time $runtime --only-summary --html results/$i.html --csv results/csv/$i
         echo "~~~ Written locust/results/$i.html"
     done
 
