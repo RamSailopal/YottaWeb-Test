@@ -6,7 +6,8 @@
 # since you aren't fighting for cpu time as you are on a gitpod.
 
 # make sure there's a directory that user locust can write to store result files
-docker compose run --entrypoint '' -u root locust_yottalua bash -c "mkdir -p results/csv && chmod 777 results results/csv"
+#docker compose run --entrypoint '' -u root locust_yottalua bash -c \
+  "rm results -rf && mkdir -p results/csv && chmod 777 results results/csv"
 
 runtime=30s
 targets="yottalua yottago yottarust yottac yottaweb yottamgweb yottapython yottamg_python nodem mgdbx mgphp mgruby"
@@ -26,9 +27,11 @@ else
     for i in locust/results/*.html; do
         sed "/<link rel=/ d" "$i" -i
     done
+
     #generate overall stats
-    cp locust/results/*.html locust_reports
     cd locust_reports
+        rm `find -name '*.html' ! -name statsmaster.html`
+        cp ../locust/results/*.html .
         ./genoverallstat.sh
     cd ..
 fi
