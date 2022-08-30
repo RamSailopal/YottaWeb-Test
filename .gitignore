@@ -2,3 +2,4 @@
 locust/results
 yottarust/project/Cargo.lock
 yottarust/project/target
+yottago/yottago
