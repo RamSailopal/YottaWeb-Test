@@ -19,7 +19,6 @@ The different stacks extract the same data from their embedded YottaDB databases
     ^PATIENTS(1,"sex")="Male"
 
 
-​    
  This data is then exposed as a REST API, JSON based endpoint:
 
     [{ "id": "1", "name": "Bob Taylor", "age: "52", "sex": "Male", "address: "234,Timbucktwo Road, Fantasy City" }]
@@ -31,6 +30,8 @@ You need the latest docker (I have 20.10.17) installed so that it runs without s
 ```shell
 git clone https://github.com/berwynhoyt/YottaWeb-Test.git
 cd YottaWeb-Test
+docker rm $(docker ps -a -f status=exited -q)
+docker compose down  # remove any containers this project previously started
 docker compose up
 # now wait for it to build and run all the docker images
 ```
@@ -41,7 +42,7 @@ Finally, run the tests in a new terminal:
 ./runlocal
 ```
 
-This should generate your new test results in the locust_reports folder. You can see [my overall results here](https://htmlpreview.github.io/?https://github.com/berwynhoyt/YottaWeb-Test/blob/main/locust_reports/overallstats.html).
+This should generate your new test results in the locust_reports folder. You can see [my results here](https://htmlpreview.github.io/?https://github.com/berwynhoyt/YottaWeb-Test/blob/main/locust_reports/overallstats.html). 1000 users were tested against each stack. The automation script ./runlocal.sh runs each stack for 30 seconds (you can alter it there). 
 
 # Python Stacks
 
@@ -202,41 +203,9 @@ https://8099-gitpod-address - **mgphp**
 
 https://8100-gitpod-address - **mgruby**
 
+# Results
 
-# Actual Test runs
-
-1000 users were tested against each stack. The number of requests were allowed to reach approxamately 100000 requests.
-
-The results for each stack can be found here:
-
-**yottamgweb** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottamgweb.html
-
-**yottamg_python** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottamg_python.html
-
-**nodem** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/nodem.html
-
-**mgdbx** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mgdbx.html
-
-**yottapython** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottapython.html
-
-**yottago** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottago.html
-
-**yottaweb** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottaweb.html
-
-**yottac** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottac.html
-
-**yottarust** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottarust.html
-
-**yottalua** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/yottalua.html
-
-**mgphp** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_php.html
-
-**mgruby** - https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/mg_ruby.html
-
-
-# Overall Comparison of performance
-
-https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob/main/locust_reports/overallstats.html
+Here are the [test results for each stack](https://htmlpreview.github.io/?https://github.com/berwynhoyt/YottaWeb-Test/blob/main/locust_reports/overallstats.html).
 
 # Further Details
 
