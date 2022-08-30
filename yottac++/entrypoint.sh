@@ -1,6 +1,6 @@
 #!/bin/bash
 apt-get update
-apt-get install -y apache2 gcc g++ cmake make libboost1.71 git
+apt-get install -y apache2 gcc g++ cmake make libboost1.71 git libasio-dev
 source $(pkg-config --variable=prefix yottadb)/ydb_env_set
 /opt/yottadb/current/ydb <<< 'H'
 (echo "D ^%GI";echo "/home/global/patients.go";echo "") | /opt/yottadb/current/ydb
