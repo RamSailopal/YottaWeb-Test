@@ -217,7 +217,7 @@ https://htmlpreview.github.io/?https://github.com/RamSailopal/YottaWeb-Test/blob
 
 # Further Details
 
-The application code relating to each framwork is within each framework directory i.e.
+The application code relating to each framework is within each framework directory i.e.
 
 https://github.com/RamSailopal/YottaWeb-Test/blob/main/yottaweb/patientapi.m
 
