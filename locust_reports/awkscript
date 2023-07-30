@@ -3,6 +3,8 @@ BEGIN { FS="[<]|[>]";
 }
 FNR==123 { cnt++;
            hstname[cnt]=$5; 
+           split($5, fields, "[/:]*");
+           url[cnt]=fields[2] ".html";
 } 
 FNR==162 { requests[cnt]=$3;	
 }
@@ -41,11 +43,11 @@ FNR==200 { seventy[cnt]=$3;
               print "<h1>Request Statistics</h1>"
 	      print "<table class=\"stats\">";
               print "<thead>";
-	      print "<tr><th>Host</th><th># Requests</th><th># Fails</th><th>Average (ms)</th><th>Min (ms)</th><th>Max (ms)</th><th>Average Size (ms)</th><th>RPS</th><th>Failures/s</th></tr>";
+	      print "<tr><th>Host</th><th>Report</th><th># Requests</th><th># Fails</th><th>Average (ms)</th><th>Min (ms)</th><th>Max (ms)</th><th>Average Size (ms)</th><th>RPS</th><th>Failures/s</th></tr>";
               print "</thead>";
               print "<tbody>";
 	      for (i=1;i<=cnt;i++) {
-				      print "<tr><td>"hstname[i]"</td><td>"requests[i]"</td><td>"fails[i]"</td><td>"average[i]"</td><td>"min[i]"</td><td>"max[i]"</td><td>"avsize[i]"</td><td>"rps[i]"</td><td>"failssec[i]"</td></tr>"; 
+				      print "<tr><td>"hstname[i]"</td><td><a href='"url[i]"'>detail</a></td><td>"requests[i]"</td><td>"fails[i]"</td><td>"average[i]"</td><td>"min[i]"</td><td>"max[i]"</td><td>"avsize[i]"</td><td>"rps[i]"</td><td>"failssec[i]"</td></tr>"; 
       }
               print "</tbody>";
               print "</table>";
@@ -55,11 +57,11 @@ FNR==200 { seventy[cnt]=$3;
               print "<h1>Response time Statistics</h1>"
               print "<table class=\"stats\">";
               print "<thead>";
-              print "<tr><th>Host</th><th>50%ile (ms)</th><th>60%ile (ms)</th><th>70%ile (ms)</th><th>80%ile (ms)</th><th>90%ile (ms)</th><th>95%ile (ms)</th><th>99%ile (ms)</th><th>100%ile (ms)</th></tr>";
+              print "<tr><th>Host</th><th>Report</th><th>50%ile (ms)</th><th>60%ile (ms)</th><th>70%ile (ms)</th><th>80%ile (ms)</th><th>90%ile (ms)</th><th>95%ile (ms)</th><th>99%ile (ms)</th><th>100%ile (ms)</th></tr>";
               print "</thead>";
               print "<tbody>";
               for (i=1;i<=cnt;i++) {
-                                      print "<tr><td>"hstname[i]"</td><td>"fifty[i]"</td><td>"sixty[i]"</td><td>"seventy[i]"</td><td>"eighty[i]"</td><td>"ninety[i]"</td><td>"ninetyfive[i]"</td><td>"ninetynine[i]"</td><td>"hundred[i]"</td></tr>";
+                                      print "<tr><td>"hstname[i]"</td><td><a href='"url[i]"'>detail</a></td><td>"fifty[i]"</td><td>"sixty[i]"</td><td>"seventy[i]"</td><td>"eighty[i]"</td><td>"ninety[i]"</td><td>"ninetyfive[i]"</td><td>"ninetynine[i]"</td><td>"hundred[i]"</td></tr>";
       }
               print "</tbody>";
               print "</table>";

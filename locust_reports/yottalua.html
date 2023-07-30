@@ -119,7 +119,7 @@ table.stats tr.total td {
 
         <div class="info">
             
-            <p>During: <span class="l10n datetime">2022-06-15 11:07:03</span> - <span class="l10n datetime">2022-06-15 11:08:36</span></p>
+            <p>During: <span class="l10n datetime">2022-08-30 03:00:47</span> - <span class="l10n datetime">2022-08-30 03:01:22</span></p>
             <p>Target Host: <span>http://yottalua:80</span></p>
             <p>Script: <span>locustfile.py</span></p>
         </div>
@@ -129,16 +129,16 @@ table.stats tr.total td {
             <table class="stats">
                 <thead>
                     <tr>
-                        <th>Method</th>
-                        <th>Name</th>
-                        <th># Requests</th>
-                        <th># Fails</th>
-                        <th>Average (ms)</th>
-                        <th>Min (ms)</th>
-                        <th>Max (ms)</th>
-                        <th>Average size (bytes)</th>
-                        <th>RPS</th>
-                        <th>Failures/s</th>
+                        <th class="sortable">Method</th>
+                        <th class="sortable">Name</th>
+                        <th class="sortable"># Requests</th>
+                        <th class="sortable"># Fails</th>
+                        <th class="sortable">Average (ms)</th>
+                        <th class="sortable">Min (ms)</th>
+                        <th class="sortable">Max (ms)</th>
+                        <th class="sortable">Average size (bytes)</th>
+                        <th class="sortable">RPS</th>
+                        <th class="sortable">Failures/s</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -146,27 +146,27 @@ table.stats tr.total td {
                         <tr>
                             <td>GET</td>
                             <td>/api/patients</td>
-                            <td>102576</td>
-                            <td>150</td>
-                            <td>34</td>
-                            <td>1</td>
-                            <td>292</td>
-                            <td>99</td>
-                            <td>1102.0</td>
-                            <td>1.6</td>
+                            <td>21781</td>
+                            <td>725</td>
+                            <td>1217</td>
+                            <td>61</td>
+                            <td>13206</td>
+                            <td>96</td>
+                            <td>623.9</td>
+                            <td>20.8</td>
                         </tr>
                     
                         <tr class="total">
                             <td></td>
                             <td>Aggregated</td>
-                            <td>102576</td>
-                            <td>150</td>
-                            <td>34</td>
-                            <td>1</td>
-                            <td>292</td>
-                            <td>99</td>
-                            <td>1102.0</td>
-                            <td>1.6</td>
+                            <td>21781</td>
+                            <td>725</td>
+                            <td>1217</td>
+                            <td>61</td>
+                            <td>13206</td>
+                            <td>96</td>
+                            <td>623.9</td>
+                            <td>20.8</td>
                         </tr>
                     
                 </tbody>
@@ -178,16 +178,16 @@ table.stats tr.total td {
             <table class="stats">
                 <thead>
                     <tr>
-                        <th>Method</th>
-                        <th>Name</th>
-                        <th>50%ile (ms)</th>
-                        <th>60%ile (ms)</th>
-                        <th>70%ile (ms)</th>
-                        <th>80%ile (ms)</th>
-                        <th>90%ile (ms)</th>
-                        <th>95%ile (ms)</th>
-                        <th>99%ile (ms)</th>
-                        <th>100%ile (ms)</th>
+                        <th class="sortable">Method</th>
+                        <th class="sortable">Name</th>
+                        <th class="sortable">50%ile (ms)</th>
+                        <th class="sortable">60%ile (ms)</th>
+                        <th class="sortable">70%ile (ms)</th>
+                        <th class="sortable">80%ile (ms)</th>
+                        <th class="sortable">90%ile (ms)</th>
+                        <th class="sortable">95%ile (ms)</th>
+                        <th class="sortable">99%ile (ms)</th>
+                        <th class="sortable">100%ile (ms)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -195,27 +195,27 @@ table.stats tr.total td {
                         <tr>
                             <td>GET</td>
                             <td>/api/patients</td>
-                            <td>37</td>
-                            <td>43</td>
-                            <td>48</td>
-                            <td>52</td>
-                            <td>57</td>
-                            <td>64</td>
-                            <td>75</td>
+                            <td>230</td>
+                            <td>240</td>
+                            <td>260</td>
                             <td>290</td>
+                            <td>2400</td>
+                            <td>12000</td>
+                            <td>13000</td>
+                            <td>13000</td>
                         </tr>
                     
                         <tr class="total">
                             <td></td>
                             <td>Aggregated</td>
-                            <td>37</td>
-                            <td>43</td>
-                            <td>48</td>
-                            <td>52</td>
-                            <td>57</td>
-                            <td>64</td>
-                            <td>75</td>
+                            <td>230</td>
+                            <td>240</td>
+                            <td>260</td>
                             <td>290</td>
+                            <td>2400</td>
+                            <td>12000</td>
+                            <td>13000</td>
+                            <td>13000</td>
                         </tr>
                     
                 </tbody>
@@ -228,10 +228,10 @@ table.stats tr.total td {
                 <table class="stats">
                     <thead>
                         <tr>
-                            <th>Method</th>
-                            <th>Name</th>
-                            <th>Error</th>
-                            <th>Occurrences</th>
+                            <th class="sortable">Method</th>
+                            <th class="sortable">Name</th>
+                            <th class="sortable">Error</th>
+                            <th class="sortable">Occurrences</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -239,8 +239,15 @@ table.stats tr.total td {
                             <tr>
                                 <td>GET</td>
                                 <td>/api/patients</td>
+                                <td>502 Server Error: Proxy Error for url: http://yottalua:80/api/patients</td>
+                                <td>17</td>
+                            </tr>
+                        
+                            <tr>
+                                <td>GET</td>
+                                <td>/api/patients</td>
                                 <td>Remote end closed connection without response</td>
-                                <td>150</td>
+                                <td>708</td>
                             </tr>
                         
                     </tbody>
@@ -260,7 +267,7 @@ table.stats tr.total td {
             <h2>Final ratio</h2>
             <div class="tasks" data-tasks="{&quot;per_class&quot;: {&quot;mgwebUser&quot;: {&quot;ratio&quot;: 1.0, &quot;tasks&quot;: {&quot;mg_web&quot;: {&quot;ratio&quot;: 1.0}}}}, &quot;total&quot;: {&quot;mgwebUser&quot;: {&quot;ratio&quot;: 1.0, &quot;tasks&quot;: {&quot;mg_web&quot;: {&quot;ratio&quot;: 1.0}}}}}"></div>
         </div>
-    
+
     </div>
 
     
@@ -518,7 +525,7 @@ function fillTasksFromObj() {
 }
 
 function fillTasksFromRequest() {
-    $.get('/tasks', function (data) {
+    $.get('./tasks', function (data) {
         _renderTasks(data)
     });
 }
@@ -530,12 +537,12 @@ function fillTasksFromRequest() {
     <script>
         
 var stats_history = {
-    "time": ["11:07:08", "11:07:13", "11:07:18", "11:07:23", "11:07:28", "11:07:33", "11:07:38", "11:07:43", "11:07:48", "11:07:53", "11:07:58", "11:08:03", "11:08:08", "11:08:13", "11:08:18", "11:08:23", "11:08:28", "11:08:33"].map(server_time => new Date(new Date().setUTCHours(...(server_time.split(":")))).toLocaleTimeString()),
-    "user_count": [{"value": 5}, {"value": 10}, {"value": 15}, {"value": 20}, {"value": 25}, {"value": 30}, {"value": 35}, {"value": 40}, {"value": 45}, {"value": 50}, {"value": 55}, {"value": 60}, {"value": 65}, {"value": 70}, {"value": 75}, {"value": 80}, {"value": 85}, {"value": 90}],
-    "current_rps": [{"users": 5, "value": 855.6666666666666}, {"users": 10, "value": 1097.625}, {"users": 15, "value": 1247.9}, {"users": 20, "value": 1259.1}, {"users": 25, "value": 1229.5}, {"users": 30, "value": 1093.1}, {"users": 35, "value": 971.3}, {"users": 40, "value": 988.7}, {"users": 45, "value": 1097.9}, {"users": 50, "value": 1072.8}, {"users": 55, "value": 974.9}, {"users": 60, "value": 940.5}, {"users": 65, "value": 971.7}, {"users": 70, "value": 1073.8}, {"users": 75, "value": 1135.9}, {"users": 80, "value": 1157.0}, {"users": 85, "value": 1150.1}, {"users": 90, "value": 1143.0}],
-    "current_fail_per_sec": [{"users": 5, "value": 0}, {"users": 10, "value": 0}, {"users": 15, "value": 0.3}, {"users": 20, "value": 0.4}, {"users": 25, "value": 0.3}, {"users": 30, "value": 2.8}, {"users": 35, "value": 6.7}, {"users": 40, "value": 7.4}, {"users": 45, "value": 3.4}, {"users": 50, "value": 1.4}, {"users": 55, "value": 2.1}, {"users": 60, "value": 0.9}, {"users": 65, "value": 0.2}, {"users": 70, "value": 0.1}, {"users": 75, "value": 0.2}, {"users": 80, "value": 0.2}, {"users": 85, "value": 0.1}, {"users": 90, "value": 1.8}],
-    "response_time_percentile_50": [{"users": 5, "value": 2}, {"users": 10, "value": 4}, {"users": 15, "value": 7}, {"users": 20, "value": 11}, {"users": 25, "value": 15}, {"users": 30, "value": 20}, {"users": 35, "value": 25}, {"users": 40, "value": 28}, {"users": 45, "value": 30}, {"users": 50, "value": 37}, {"users": 55, "value": 42}, {"users": 60, "value": 44}, {"users": 65, "value": 46}, {"users": 70, "value": 46}, {"users": 75, "value": 47}, {"users": 80, "value": 51}, {"users": 85, "value": 53}, {"users": 90, "value": 54}],
-    "response_time_percentile_95": [{"users": 5, "value": 4}, {"users": 10, "value": 7}, {"users": 15, "value": 11}, {"users": 20, "value": 15}, {"users": 25, "value": 25}, {"users": 30, "value": 42}, {"users": 35, "value": 49}, {"users": 40, "value": 46}, {"users": 45, "value": 47}, {"users": 50, "value": 55}, {"users": 55, "value": 60}, {"users": 60, "value": 63}, {"users": 65, "value": 62}, {"users": 70, "value": 63}, {"users": 75, "value": 63}, {"users": 80, "value": 69}, {"users": 85, "value": 72}, {"users": 90, "value": 72}],
+    "time": ["03:00:52", "03:00:57", "03:01:02", "03:01:07", "03:01:12", "03:01:17"].map(server_time => new Date(new Date().setUTCHours(...(server_time.split(":")))).toLocaleTimeString()),
+    "user_count": [{"value": 1000}, {"value": 1000}, {"value": 1000}, {"value": 1000}, {"value": 1000}, {"value": 642}],
+    "current_rps": [{"users": 1000, "value": 350.0}, {"users": 1000, "value": 597.625}, {"users": 1000, "value": 745.6}, {"users": 1000, "value": 749.2}, {"users": 1000, "value": 739.7}, {"users": 642, "value": 722.3}],
+    "current_fail_per_sec": [{"users": 1000, "value": 27.666666666666668}, {"users": 1000, "value": 27.875}, {"users": 1000, "value": 23.2}, {"users": 1000, "value": 24.1}, {"users": 1000, "value": 23.9}, {"users": 642, "value": 20.8}],
+    "response_time_percentile_50": [{"users": 1000, "value": 150.0}, {"users": 1000, "value": 170.0}, {"users": 1000, "value": 220.0}, {"users": 1000, "value": 230.0}, {"users": 1000, "value": 240.0}, {"users": 642, "value": 240.0}],
+    "response_time_percentile_95": [{"users": 1000, "value": 3300.0}, {"users": 1000, "value": 5100.0}, {"users": 1000, "value": 8900.0}, {"users": 1000, "value": 12000.0}, {"users": 1000, "value": 12000.0}, {"users": 642, "value": 12000.0}],
     "markers": [],
 };
         var rpsChart = new LocustLineChart($(".charts-container"), "Total Requests per Second", ["RPS", "Failures/s"], "reqs/s", ['#00ca5a', '#ff6d6d']);
@@ -578,6 +585,26 @@ var stats_history = {
         });
 
         fillTasksFromObj()
+    </script>
+
+    <script>
+        $('.sortable').click(function() {
+            var table = $(this).parents('table').eq(0)
+            var rowArray = table.find('tr:gt(0)').toArray()
+            var aggregatedRow = rowArray.pop()
+            var rows = rowArray.sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc){rows = rows.reverse()}
+            for (var i = 0; i < rows.length; i++){table.append(rows[i])}
+            table.append(aggregatedRow)
+        })
+        function comparer(index) {
+            return function(a,b) {
+                var valA = getCellValue(a, index), valB = getCellValue(b, index)
+                return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.toString().localeCompare(valB)
+            }
+        }
+        function getCellValue(row, index) { return $(row).children('td').eq(index).text() }
     </script>
 </body>
 </html>
